@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ChrissieSparling/votechrissie/static/css/main.3a958a95.css",
+    "main.js": "/ChrissieSparling/votechrissie/static/js/main.84ea2493.js",
+    "static/media/testimonials-bg.png": "/ChrissieSparling/votechrissie/static/media/testimonials-bg.ec360b89e4cb398056f7.png",
+    "static/media/family.jpg": "/ChrissieSparling/votechrissie/static/media/family.4f702a899207721a2d1d.jpg",
+    "static/media/meGFalls.jpg": "/ChrissieSparling/votechrissie/static/media/meGFalls.03eefa00edec7bac5f9f.jpg",
+    "static/media/drums.jpeg": "/ChrissieSparling/votechrissie/static/media/drums.57962dee91c5d746355b.jpeg",
+    "static/media/moonlogo.jpg": "/ChrissieSparling/votechrissie/static/media/moonlogo.0432adc61d5306cb2640.jpg",
+    "static/media/forestMoon.jpg": "/ChrissieSparling/votechrissie/static/media/forestMoon.fa03892e79137396fb8d.jpg",
+    "static/media/slick.svg": "/ChrissieSparling/votechrissie/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/ChrissieSparling/votechrissie/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/ChrissieSparling/votechrissie/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/ChrissieSparling/votechrissie/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/ChrissieSparling/votechrissie/index.html",
+    "main.3a958a95.css.map": "/ChrissieSparling/votechrissie/static/css/main.3a958a95.css.map",
+    "main.84ea2493.js.map": "/ChrissieSparling/votechrissie/static/js/main.84ea2493.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a958a95.css",
+    "static/js/main.84ea2493.js"
+  ]
+}
