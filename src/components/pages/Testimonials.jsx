@@ -26,7 +26,7 @@ export const Testimonials = () => {
                 </i>
                 <p data-aos='zoom-out-down'>{val.text}</p>
                 <div className='img' data-aos='zoom-out-right'>
-                  <img src={val.image} alt='' />
+                  <img src={require('../data/images/testimonials/family.jpg')} alt='' />
                 </div>
                 <h3 data-aos='zoom-out-left'>{val.name}</h3>
                 <label data-aos='zoom-out'>{val.post}</label>

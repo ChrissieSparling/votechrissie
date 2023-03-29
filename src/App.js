@@ -1,7 +1,7 @@
-
 import "./App.css"
 import { Pages } from "./components/pages/Pages"
 import { useEffect } from "react"
+import React from "react"
 
 //npm install --save aos@next
 //aos

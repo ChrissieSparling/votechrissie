@@ -16,7 +16,7 @@ export const About = () => {
           {about.map((val) => (
             <>
               <div className='left' data-aos='fade-down-right'>
-                <img src= { val.image } alt='me and g' />
+                <img src={require('../data/images/meGFalls.jpg')} alt='me and g' />
               </div>
               <div className='right' data-aos='fade-down-left'>
                 <Heading title='About Me' />
@@ -38,7 +38,8 @@ export const About = () => {
                 <button className='primaryBtn'>Join us!</button>
                 </a>
                 <a href='https://www.instagram.com/chrissiesparling'>
-                <button className='primaryBtn'>Instagram</button></a>
+                <button className="backButton">Instagram</button>
+                </a>
               </div>
             </>
           ))}

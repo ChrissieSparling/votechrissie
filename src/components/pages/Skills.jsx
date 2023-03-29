@@ -18,8 +18,6 @@ export const Skills = () => {
                 </div>
             ))}
           </div>
-          {/* <a href="/" onClick={ Home }>
-        <button classname="backButton">Back to HomePage</button></a> */}
         </div>
         </section>
     </>

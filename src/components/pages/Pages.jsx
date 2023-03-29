@@ -1,16 +1,15 @@
 import React from "react"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-import Footer from "../common/Footer"
+import { HashRouter as Router, Route, Switch } from "react-router-dom"
+// import { Footer } from "../common/Footer"
 import { Header } from "../common/Header"
 import { Home } from "../home/Home"
 import { About } from "./About"
 import { Videos } from "./Videos"
+// import { Contact } from "./Contact"
 import { Portfolio } from "./Portfolio"
 import { Skills } from "./Skills"
 import { Testimonials } from "./Testimonials"
-
-
-export const Pages = () =>{
+export const Pages = () => {
   return (
     <>
       <Router>
@@ -22,8 +21,9 @@ export const Pages = () =>{
           <Route exact path='/portfolio' component={Portfolio} />
           <Route exact path='/testimonials' component={Testimonials} />
           <Route exact path='/videos' component={Videos} />
+          {/* <Route exact path='/contact' component={Contact} /> */}
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </>
   )

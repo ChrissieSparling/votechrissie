@@ -2,7 +2,7 @@ import { Menu } from "@mui/icons-material"
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { navlink } from "../data/dummydata"
-import moonlogo from "../data/images/moonlogo.jpg"
+// import { moonlogo } from "../data/images/moonlogo.jpg"
 
 export const Header = () => {
   const [responsive, setResponsive] = useState(false)
@@ -11,7 +11,7 @@ export const Header = () => {
       <header>
         <div className='container flexsb'>
           <div className='logo'>
-            <img src={moonlogo} alt='Native Moon' data-aos='zoom-in-right' />
+            <img src={require('../data/images/moonlogo.jpg')} alt='Native Moon' data-aos='zoom-in-right' />
           </div>
           <div className={responsive ? "hideMenu" : "nav"}>
             {navlink.map((links, i) => (

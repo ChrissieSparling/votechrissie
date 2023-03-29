@@ -1,8 +1,9 @@
 import React, { useState } from "react"
-// import { Heading } from "../common/Heading"
+import { Heading } from "../common/Heading"
 import { portfolio } from "../data/dummydata"
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined"
 import { Link } from 'react-router-dom';
+
 
 export const openInNewTab = (url) => {
   const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
@@ -26,9 +27,9 @@ export const Portfolio = () => {
 
   return (
     <>
-      <article className="portfolio">
-        <div className='container'>
-          <header id= "title" >Portfolio</header>
+    <section className='portfolio'>
+        <div className ='container'>
+          <Heading title=<span>Portfolio</span> />
           <div className='catButton'>
             {category.map((category) => (
               <button className='primaryBtn' onClick={() => filterItems(category)} data-aos='zoom-out-down'>
@@ -36,29 +37,23 @@ export const Portfolio = () => {
               </button>
             ))}
           </div>
-          <div className='contentGrid4'>
+          <div className='contentGrid3'>
             {list.map((item) => (
-              <div className='box' data-aos='fade-up'>
-                <div className='img'>
-                  <img src={item.cover} alt='' />
-                </div>
-                <div className='folio'>
-                  <h3>{item.title}</h3>
-                  <span>{item.name}</span>
-                  <VisibilityOutlinedIcon />
-                  <Link href="#" onClick = {() => openInNewTab(item.url)}>
+              <div className='box' data-aos='flip-left'>
+                <i>{item.icon}</i>
+                <h3>{item.title}</h3>
+                <p>{item.name}</p>
+                <VisibilityOutlinedIcon /><Link href="#" onClick = {() => openInNewTab(item.url)}>
                   <button className='primaryBtn' onClick={() => filterItems(item.url)} >
                 Check me out
               </button>
                   </Link>
                  </div>
-              </div>
             ))}
-          </div>
+              </div>
         </div>
-      </article>
+      </section>
     </>
   )
 }
-
 
