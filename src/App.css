@@ -1,38 +1,521 @@
-.App {
-  text-align: center;
+:root {
+  --primaryBackground: #212222;
+  --secondaryBackground: #2f3030;
+  --primaryColor: #e00dce;
+  --greyDark: #7d8792;
+  --headingColor: #0d0962;
+  --white: #fff;
+  --black: #000;
+  --sliver: #bac8d3;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--headingColor);
+  color:var(--primaryColor);
+  font-family: "Poppins", sans-serif;
+  max-height: 100%;
+  /*added above maxheight */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  color:bisque;
+  text-decoration: none;
+  transition: 0.5s;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover {
+  color: var(--primaryColor);
+}
+p {
+  color: bisque;
+  font-size: 15px;
+  line-height: 30px;
+  margin: 20px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+.container {
+  max-width: 80%;
+  margin: auto;
+  border: none;
+  outline: none;
+  padding: 0; 
+}
+.flexsb {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+/* applies to all standard buttons */
+button {
+  border: none;
+  outline: solid 2px var(--primaryColor);
+  background: none;
+  font-size: 17px;
+  color: var(--white);
+  padding: 15px 50px;
+  border-radius: 50px;
+  margin-top: 20px;
+  /* i added the next line */
+  margin-right: 30px;
+  cursor: pointer;
+}
+.fontSize {
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* --------end apply all------------ */
+
+/*--------- start header-------------*/
+/* header.jsx container */
+header {
+  background-color: var(--headingColor);
+  height: 10vh;
+  line-height: 10vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+header a {
+  margin-left: 40px;
+}
+.toggle {
+  cursor: pointer;
+  color: var(--white);
+  display: none;
+}
+/* adjust screen for header */
+@media screen and (max-width: 768px) {
+  header .nav {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  header a {
+    width: 100%;
+    display: block;
+    color: var(--white);
+  }
+  .toggle {
+    display: block;
+    font-size: 15px;
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+
+  }
+  .hideMenu {
+    display: block;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: var(--headingColor);
+  }
+}
+/*---------header-------------*/
+/* all sections */
+section {
+  height: 90vh;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+.flex {
+  display: flex;
+}
+
+/*---------hero-------------*/
+.hero {
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("./assets/images/forestmoon.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 90vh;
+}
+/* i added title */
+#heroTitle{
+  text-align: center;
+  font-weight: bold;
+  font-size:60px;
+  color: var(--primaryColor);
+  margin-top: 10px;
+  margin-bottom: 60px; 
+}
+.heroContent {
+  display: inline-block;
+  justify-content: flex-start;
+  align-self: normal;
+  position: absolute;
+  max-width: 40%;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 50px;
+  color: var(--primaryColor);
+  /* font-weight: 600; */
+  text-align: center;
+  margin-top: 10px;
+  /* margin-bottom: 40px; */
+  
+}
+.hero h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color:var(--primaryColor);
+}
+.hero :hover {
+  color: aqua;
+}
+
+/*---------hero-------------*/
+.heading {
+  font-size: 30px;
+  color: var(--primaryColor);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/*---------about-------------*/
+.about .primaryBtn {
+  margin-left: 20px;
+}
+.about .heading {
+  text-align: left;
+  margin: 0;
+}
+.left {
+  width: 60%;
+}
+.right {
+  width: 40%;
+}
+
+/*---------about-------------*/
+.about .primaryBtn{
+  margin-bottom: 20px;
+}
+.about .Heading {
+text-align: right;
+margin: 0;
+}
+
+.left img{
+border-radius: 20px 0px 20px 0px;
+max-width: 60%;
+height: 75%;
+margin-left: 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-right: 20px;
+padding: 10px;
+border: 1px solid var(--primaryColor);
+
+}
+.right {
+display: inline-block;
+justify-content: right;
+max-width: 40%;
+max-height: 80%;
+padding: 10px;
+border: 1px solid var(--primaryColor);
+border-radius: 30px 0px 30px 0px;
+margin-left: 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-right: 20px;
+
+}
+.about :hover {
+color: aqua;
+}
+/* ------ End About ------- */
+/*---------skills-------------*/
+.skills-container{
+box-sizing: border-box;
+}
+.skills h1{
+text-align: center;
+font-size: 60px;
+margin-top: 100px;
+margin-bottom: 20px;
+}
+
+.skills .box {
+font-size: 30px;
+background-color: var(--primaryBackground);
+max-width: 90%;
+max-height: fit-content;
+justify-content: space-around;
+align-items: center;
+padding: 10px;
+margin-left: 10px;
+border: 1px solid var(--primaryColor);
+border-radius: 20px;
+
+}
+.skills i {
+color: rgb(241, 249, 5);
+}
+.skills h3 {
+margin-top: 10px;
+}
+.contentGrid3 {
+display: grid;
+width: fit-content;
+height: fit-content;
+grid-template-columns: repeat(3, 1fr);
+/* grid-template-rows: repeat(3,1fr); */
+grid-template-areas: 'item.icon' 'item.title' 'item.desc';
+grid-gap: 10px;
+grid-row-gap: 30px;
+
+}
+.skills :hover {
+color: var(--primaryColor);
+}
+
+
+/*---------end skills-------------*/
+/* -----------start portfolio----------- */
+#title {
+text-align: center;
+font-size: 60px;
+margin-top: 20px;
+margin-bottom: 20px;
+background-color: rgb(206, 246, 185);
+color:#05321c;
+border-radius: 10px;
+
+}
+.portfolio .container{
+box-sizing: border-box;
+margin:auto;
+}
+
+.portfolio .box {
+font-size: 20px;
+background-color: var(--primaryBackground);
+max-width: 90%;
+max-height: fit-content;
+justify-content: space-between;
+/* align-items: center; */
+/* padding: 10px; */
+/* margin-left: 10px;
+margin-right: 10px; */
+border: 2px solid var(--primaryColor);
+border-radius: 20px;
+margin-bottom: auto;
+
+
+}
+.contentGrid4 {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+/* grid-template-rows: repeat(3,1fr); */
+grid-template-areas: 'item.cover' 'item.name' 'item.title';
+grid-gap: 20px;
+
+}
+
+article {
+margin-top: 200px;
+margin-bottom: 20px;
+}
+article img {
+display: flex;
+justify-content: center;
+margin-left: 20px;
+margin-top: 30px;
+margin-bottom: 30px;
+align-items: center;
+width: 90%;
+height: 50%;
+border-radius: 30px;
+}
+article .box {
+position: relative;
+align-content: center;
+transition: 0.5s;
+margin-bottom: auto;
+}
+.folio {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+width: 90%;
+height: 50%;
+opacity: 1;
+margin-bottom: 20px;
+cursor: pointer;
+}
+
+
+article .box:hover .folio::after,
+article .box:hover .folio {
+opacity: 1;
+color:aqua;
+}
+.catButton {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 40px 0;
+}
+.catButton button {
+text-transform: capitalize;
+/* margin-right: 20px; */
+}
+
+/*---------portfolio-------------*/
+/*---------testimonials-------------*/
+
+.testimonials {
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin:auto;
+}
+.testimonials::after {
+background-image: url("./assets/images/testimonials-bg.png");
+}
+.testimonials .box {
+max-width: 60%;
+}
+.testimonials i {
+background-color: var(--white);
+font-size: 20px;
+padding: 15px;
+margin: 30px 0;
+display: inline-block;
+color: var(--primaryColor);
+}
+.testimonials .img {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 120px;
+height: 120px;
+margin: auto;
+border-radius: 50%;
+border: 3px solid var(--primaryColor);
+}
+.testimonials img {
+width: 100px;
+height: 100px;
+background-size: cover;
+border-radius: 50%;
+object-fit: cover;
+}
+label {
+color: var(--primaryColor);
+margin: 10px 0;
+display: inline-block;
+}
+/*---------testimonials-------------*/
+/*---------videos-------------*/
+
+.catButton {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 40px 0;
+}
+.catButton button {
+text-transform: capitalize;
+/* margin-right: 20px; */
+}.videos img {
+width: 100%;
+border-radius: 30px
+}
+.videos .box {
+background-color: var(--primaryBackground);
+border-radius: 20px;
+justify-content: center;
+margin: 20px;
+height: auto;
+}
+
+.videos :hover {
+color: var(--primaryColor);
+}
+.videos .text {
+padding: 10px 30px;
+}
+/*---------end videos-------------*/
+
+/*---------footer-------------*/
+footer {
+position: sticky;
+left: 0;
+right: 0;
+margin-top: 50vh;
+width: 100%;
+/* padding: 30px; */
+flex-wrap: wrap;
+display: inline-block;
+text-align: center;
+background-color: var(--primaryBackground);
+color: var(--primaryColor)
+
+}
+footer i {
+margin: 5px;
+color: var(--primaryColor);
+}
+/*---------end footer-------------*/
+/* adjust screen size */
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+  .heroContent {
+    max-width: 80%;
+  }
+
+  .hero::after {
+    background-image: url("./assets/images/forestmoon.jpg");
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 60vh;
+  }
+  section {
+    height: auto;
+    padding-top: 50px;
+  }
+  .flexsb,
+  .about .flex {
+    flex-direction: column;
+  }
+  .right,
+  .left {
+    width: 100%;
+  }
+  .contentGrid4,
+  .contentGrid3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  article {
+    margin: 0;
+    padding-bottom: 50px;
   }
 }
